@@ -4,17 +4,20 @@
 using namespace::std;
 int convert(string s) {
     int rows, cols, size, greylevels;
-    string filetype;
-
+    string filetype, comment;
     // open stream in binary mode
     ifstream istr(s, ios::in | ios::binary);
     if(istr.fail()) return -1;;
     // parse header
-    istr >> filetype >> rows >> cols >> greylevels;
+    getline(istr, filetype);
+    getline(istr, comment);
+    istr>>rows>>cols>>greylevels;
+    //istr >> filetype >> getline(istr, comment) >> rows >> cols >> greylevels;
     size = rows * cols;
 
     // check data
     cout << "filetype: " << filetype << endl;
+    cout << "comment: " << comment <<endl;
     cout << "rows: " << rows << endl;
     cout << "cols: " << cols << endl;
     cout << "greylevels: " << greylevels << endl;
