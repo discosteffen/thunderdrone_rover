@@ -50,11 +50,11 @@ int convert(string s) {
     ostr << "P2 \n" << rows <<" "<< cols <<"\n"<< greylevels << endl;
     // write data
     int line_ctr = 0;
-    for(int* ptr = data; ptr < data+size; ptr++) {
+    for(int* ptr = data; ptr < data+size; ++ptr) {
         // print pixel value
         ostr << *ptr << " ";
         // endl every ~20 pixels for some readability
-        if(++line_ctr % 20 == 0) ostr << endl;
+        if(++line_ctr % 1024 == 0) ostr << endl;
     }
     ostr.close();
 
