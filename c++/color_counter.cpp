@@ -26,8 +26,7 @@ int main(){
 
     count = 0;
   }
-  for (int i=0; i<color.size(); i++)
+  for (int i=3; i<color.size(); i++)
     cout << color[i] << "\n";
-    cout<<"FINISHED"<<endl; 
   return 0;
 }
