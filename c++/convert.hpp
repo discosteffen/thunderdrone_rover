@@ -12,7 +12,6 @@ int convert(string s) {
     getline(istr, filetype);
     getline(istr, comment);
     istr>>rows>>cols>>greylevels;
-    //istr >> filetype >> getline(istr, comment) >> rows >> cols >> greylevels;
     size = rows * cols;
 
     // check data
