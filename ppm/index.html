@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Node JS lidar mapping</title>
+    <!--link rel="stylesheet" type="text/css" href="style/style.css">  </head-->
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font: 8px Helvetica, Arial; }
+
+#head{
+  background-color: black;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+}
+
+#general{
+  padding: 25px;
+  width: 100%;
+  border: 1px solid black;
+  min-height: 400px;
+}
+
+</style>
+  <body>
+    <div id="head">Lidar Mapping</div>
+
+    <img src="map.png" id="myImage" />
+
+    <div id="textByLine">TextByline</div>
+
+
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+
+    setInterval(function() {
+        var myImageElement = document.getElementById('myImage');
+        myImageElement.src = 'map.png?rand=' + Math.random();
+    }, 2000);
+
+/*
+
+      var socket = io();
+        socket.on('textByLine', function (value) { // When a 'update-value' event is received, execute the following code.
+            //console.log('received new value', value);
+            $('#textByLine').html(value);
+        });
+*/
+    </script>
+
+  </body>
+</html>
