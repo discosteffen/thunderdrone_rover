@@ -1,0 +1,10 @@
+<!--
+  Used for visualising rplidar in action.  
+  
+  It requires rplidar_gaps.launch.
+ -->
+<launch>
+  <include file="$(find rplidar_ros_gaps)/launch/rplidar_gaps.launch" />
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rplidar_ros_gaps)/rviz/rplidar.rviz" />
+</launch>
