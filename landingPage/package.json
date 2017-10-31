@@ -1,0 +1,23 @@
+{
+  "name": "orient",
+  "version": "1.0.0",
+  "description": "WebRTC and device orientation and location acquisition",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "peerjs",
+    "webrtc"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ianblenke/orient"
+  },
+  "author": "Ian Blenke <ian@blenke.com>",
+  "license": "ISC",
+  "dependencies": {
+    "gyronorm": "^2.0.6",
+    "peer": "^0.2.8"
+  }
+}
