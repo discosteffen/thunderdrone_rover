@@ -10,7 +10,7 @@ int main(){
   while(1){
     system("rosrun map_server map_saver -f old"); //run the robot os command to update image
     convert(filename);                            //convert the binary pgm to ascii pgm
-    usleep(1000000);
+    usleep(10000);
   }
   return 0;
 }

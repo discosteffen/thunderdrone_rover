@@ -3,7 +3,7 @@
 :root{
   --grey:                   #4d5057;
   --dark-blue:              #5e6572;
-  --blue:                   #8693ab;
+  --blue:                   #00FFFA;
   --light-blue:             #a9b4c2;
   --off-white:              #eef1ef;
 }
@@ -13,62 +13,87 @@ body{
   width:                    100vw;
   height:                   100vh;
   margin:                   0 auto;
-  background:               var(--grey);
+  background:               black;
   overflow:                 hidden;
 }
 #container{
   width:                    80%;
   height:                   100%;
   margin:                   0 auto;
-  background:               var(--light-blue);
+  margin-top:               1em;
 }
 header{
   width:                    100%;
   height:                   10%;
   margin:                   0 auto;
-  border-bottom:            dotted var(--blue);
+  margin-bottom:            1em;
 }
 header>h1{
   margin:                   0 auto;
   text-align:               center;
-  color:                    var(--off-white);
+  color:                    var(--blue);
   line-height:              10vh;
-  font-family:              Verdana;
+  font-family:              "Courier New";
   font-variant:             small-caps;
-  font-size:                3em;
+  font-size:                5em;
+  font-weight:              100;
 }
 #istream_1_wrap{
-  width:                    50%;
+  width:                    48%;
   height:                   79%;
   float:                    left;
+  background-repeat:        none;
+  background-position:      center;
+  background-size:          100% 100%;
+  border:                   1px solid var(--blue);
 }
 #istream_2_wrap{
-  width:                    50%;
+  width:                    48%;
   height:                   79%;
   float:                    right;
+  background-repeat:        none;
+  background-position:      center;
+  background-size:          100% 100%;
+  border:                   1px solid var(--blue);
+}
+#istream_1{
+  background:               url("../../images/test.png");
+
+}
+#istream_2{
+  background:               url("../../images/test.png");
 }
 footer{
   width:                    80%;
   height:                   10%;
   margin:                   0 auto;
-  border-top:               dotted var(--blue);
+  border-top:               var(--blue);
   position:                 absolute;
   bottom:                   0;
 }
 /*        Responsive Media       */
 
 /*            Width              */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
+  header>h1{
+    font-size:              3em;
+    line-height:            200%;
+  }
   #container{
     width:                  90%;
   }
 }
 @media only screen and (max-width: 800px) {
+  header>h1{
+    font-size:              2em;
+    line-height:            200%;
+  }
   #istream_1_wrap{
     width:                  100%;
     height:                 39.5%;
     float:                  none;
     margin:                 0 auto;
+    margin-bottom:          1em;
   }
   #istream_2_wrap{
     width:                  100%;
@@ -77,17 +102,42 @@ footer{
     margin:                 0 auto;
   }
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   header>h1{
     font-size:              2em;
     line-height:            200%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header>h1{
+    font-size:              1.5em;
+    line-height:            200%;
+  }
+  header{
+    width:                    100%;
+    height:                   10%;
+    margin:                   0 auto;
+    margin-bottom:            0em;
+  }
+}
+@media only screen and (max-width: 350px) {
+  header>h1{
+    font-size:              1em;
+    line-height:            200%;
+  }
+  header{
+    width:                    100%;
+    height:                   10%;
+    margin:                   0 auto;
+    margin-bottom:            0em;
   }
 }
 /*            Height             */
 @media only screen and (max-height: 600px) {
   header>h1{
     line-height:            10vh;
-    font-size:              2em;
+    font-size:              1.5em;
   }
 }
 @media only screen and (max-height: 300px) {

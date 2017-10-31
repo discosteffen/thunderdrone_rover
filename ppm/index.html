@@ -5,11 +5,18 @@
     <!--link rel="stylesheet" type="text/css" href="style/style.css">  </head-->
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font: 8px Helvetica, Arial; }
+body {
+  width: 100%;
+  height: 100%;
+  font: 8px Helvetica, Arial;
+  background: url(../images/background.png);
+  overflow: hidden;
+}
 
 #head{
-  background-color: black;
-  font-size: 2em;
+  font-size: 8em;
+  font-family: monospace;
+  font-variant: small-caps;
   color: white;
   text-align: center;
 }
@@ -20,13 +27,46 @@ body { font: 8px Helvetica, Arial; }
   border: 1px solid black;
   min-height: 400px;
 }
+#myImage{
+  background: url("../images/test.png");
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  width: 80%;
+  height: 80vh;
+}
+#myImage2{
+  background: url("../images/test.png");
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  width: 80%;
+  height: 80vh;
+}
+#left{
+  width: 50vw;
+  height: 100vw;
+  margin-top:3em;
+  float:left;
+}
+#right{
+  width: 50vw;
+  height: 100vw;
+  margin-top:3em;
+  float:right;
+}
 
 </style>
   <body>
     <div id="head">Lidar Mapping</div>
-
-    <img src="map.png" id="myImage" />
-
+    <div id ="left">
+    <div id="myImage" ></div>
+    </div>
+    <div id ="right">
+    <div id="myImage2" ></div>
+    </div>
     <div id="textByLine">TextByline</div>
 
 
