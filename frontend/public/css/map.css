@@ -3,7 +3,7 @@
 :root{
   --grey:                   #4d5057;
   --dark-blue:              #5e6572;
-  --blue:                   #00FFFA;
+  --blue:                   #ece4ce;
   --light-blue:             #a9b4c2;
   --off-white:              #eef1ef;
 }
@@ -31,7 +31,7 @@ header{
 header>h1{
   margin:                   0 auto;
   text-align:               center;
-  color:                    var(--blue);
+  color:                    #ece4ce;
   line-height:              10vh;
   font-family:              "Courier New";
   font-variant:             small-caps;
@@ -45,7 +45,7 @@ header>h1{
   background-repeat:        none;
   background-position:      center;
   background-size:          100% 100%;
-  border:                   1px solid var(--blue);
+  border:                   1px solid #ece4ce;
 }
 #istream_2_wrap{
   width:                    48%;
@@ -54,7 +54,7 @@ header>h1{
   background-repeat:        none;
   background-position:      center;
   background-size:          100% 100%;
-  border:                   1px solid var(--blue);
+  border:                   1px solid #ece4ce;
 }
 #istream_1{
   background:               url("../../images/test.png");
@@ -67,7 +67,7 @@ footer{
   width:                    80%;
   height:                   10%;
   margin:                   0 auto;
-  border-top:               var(--blue);
+  border-top:               #ece4ce;
   position:                 absolute;
   bottom:                   0;
 }

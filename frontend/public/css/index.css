@@ -1,14 +1,4 @@
-:root{
-  --darker_grey:#2B2B2B;
-  --dark_grey:#58595b;
-  --orange:#ed6622;
-  --blue:#4286f4;
-  --light_grey:#D3D3D3;
-}
 body{
-  background-image:url("../images/title_backgrounds.png");
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
   padding: 0;
   overflow: hidden;
   margin: 0 0 0 0;
