@@ -7,7 +7,7 @@
   <title>Lidar Interface</title>
   <meta name="description" content="Lidar Interface">
   <meta name="author" content="Andrew Nguyen">
-  <link rel="stylesheet" href="css/style.css">
+  <!--link rel="stylesheet" href="css/style.css"-->
 </head>
 
 <style>
@@ -49,7 +49,7 @@ header>h1{
   font-family: 'Roboto Condensed', Arial, sans-serif;
 /*  font-family:              "Courier New";
   font-variant:             small-caps;*/
-  font-size:                4em;
+  font-size:                3em;
   font-weight:              100;
 }
 #istream_1_wrap{
@@ -60,6 +60,8 @@ header>h1{
   background-position:      center;
   background-size:          100% 100%;
   border:                   1px solid var(--blue);
+  background:               url("map.png");
+
 }
 #istream_2_wrap{
   width:                    48%;
@@ -71,8 +73,7 @@ header>h1{
   border:                   1px solid var(--blue);
 }
 #istream_1{
-  background:               url("../../images/test.png");
-
+  background:               url("map.png");
 }
 #istream_2{
   background:               url("../../images/test.png");
@@ -108,6 +109,9 @@ footer{
     float:                  none;
     margin:                 0 auto;
     margin-bottom:          1em;
+    overflow-y: scroll;
+    overflow-x: scroll;
+
   }
   #istream_2_wrap{
     width:                  100%;
@@ -163,13 +167,16 @@ footer{
 
 #mapImage{
   float: left;
-  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 #feed{
   float: right;
   width: 100%;
 }
+
 
 </style>
 
@@ -184,7 +191,7 @@ footer{
 
     <div id="istream_1_wrap">                   <!-- image stream container 1-->
       <div id="istream_1">
-            <img src="map.png" id="mapImage" />
+        <!--img src="map.png" id="mapImage"-->
       </div>
     </div>
     <div id="istream_2_wrap">                   <!-- image stream container 2-->
