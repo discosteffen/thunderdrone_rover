@@ -1,33 +1,220 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="en">e
 
 <head>                                     <!-- Header-->
   <meta charset="utf-8">
   <title>Lidar Interface</title>
   <meta name="description" content="Lidar Interface">
   <meta name="author" content="Andrew Nguyen">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
+<style>
+/*        Author: Andrew Nguyen   */
+/*        Color Definitions       */
+:root{
+  --grey:                   #4d5057;
+  --dark-blue:              #5e6572;
+  --blue:                   #00FFFA;
+  --light-blue:             #a9b4c2;
+  --off-white:              #eef1ef;
+}
+
+/*        Top Down Style         */
+body{
+  width:                    100vw;
+  height:                   100vh;
+  margin:                   0 auto;
+  background:               black;
+  overflow:                 hidden;
+}
+#container{
+  width:                    95%;
+  height:                   100%;
+  margin:                   0 auto;
+  margin-top:               1em;
+}
+header{
+  width:                    100%;
+  height:                   10%;
+  margin:                   0 auto;
+  margin-bottom:            1em;
+}
+header>h1{
+  margin:                   0 auto;
+  text-align:               center;
+  color:                    var(--blue);
+  line-height:              10vh;
+  font-family: 'Roboto Condensed', Arial, sans-serif;
+/*  font-family:              "Courier New";
+  font-variant:             small-caps;*/
+  font-size:                4em;
+  font-weight:              100;
+}
+#istream_1_wrap{
+  width:                    48%;
+  height:                   79%;
+  float:                    left;
+  background-repeat:        none;
+  background-position:      center;
+  background-size:          100% 100%;
+  border:                   1px solid var(--blue);
+}
+#istream_2_wrap{
+  width:                    48%;
+  height:                   79%;
+  float:                    right;
+  background-repeat:        none;
+  background-position:      center;
+  background-size:          100% 100%;
+  border:                   1px solid var(--blue);
+}
+#istream_1{
+  background:               url("../../images/test.png");
+
+}
+#istream_2{
+  background:               url("../../images/test.png");
+}
+footer{
+  width:                    80%;
+  height:                   10%;
+  margin:                   0 auto;
+  border-top:               var(--blue);
+  position:                 absolute;
+  bottom:                   0;
+}
+/*        Responsive Media       */
+
+/*            Width              */
+@media only screen and (max-width: 1200px) {
+  header>h1{
+    font-size:              3em;
+    line-height:            200%;
+  }
+  #container{
+    width:                  90%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  header>h1{
+    font-size:              2em;
+    line-height:            200%;
+  }
+  #istream_1_wrap{
+    width:                  100%;
+    height:                 39.5%;
+    float:                  none;
+    margin:                 0 auto;
+    margin-bottom:          1em;
+  }
+  #istream_2_wrap{
+    width:                  100%;
+    height:                 39.5%;
+    float:                  none;
+    margin:                 0 auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header>h1{
+    font-size:              2em;
+    line-height:            200%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header>h1{
+    font-size:              1.5em;
+    line-height:            200%;
+  }
+  header{
+    width:                    100%;
+    height:                   10%;
+    margin:                   0 auto;
+    margin-bottom:            0em;
+  }
+}
+@media only screen and (max-width: 350px) {
+  header>h1{
+    font-size:              1em;
+    line-height:            200%;
+  }
+  header{
+    width:                    100%;
+    height:                   10%;
+    margin:                   0 auto;
+    margin-bottom:            0em;
+  }
+}
+/*            Height             */
+@media only screen and (max-height: 600px) {
+  header>h1{
+    line-height:            10vh;
+    font-size:              1.5em;
+  }
+}
+@media only screen and (max-height: 300px) {
+  header>h1{
+    line-height:            10vh;
+    font-size:              1em;
+  }
+}
+
+#mapImage{
+  float: left;
+  height: 100%;
+}
+
+#feed{
+  float: right;
+  width: 100%;
+}
+
+</style>
 
 <body>
 
   <div id="container">                     <!-- 70% width (good for responsive layout) -->
     <header>                               <!-- 15% height header of the page -->
       <h1>
-        >> [ Lidar Mapping ] <<
+        >> [ SOFWERX LiDAR MAPPING ] <<
       </h1>
     </header>
 
     <div id="istream_1_wrap">                   <!-- image stream container 1-->
       <div id="istream_1">
+            <img src="map.png" id="mapImage" />
       </div>
     </div>
     <div id="istream_2_wrap">                   <!-- image stream container 2-->
       <div id="istream_2">
+        <img id="feed" src="http://192.168.0.102:8080/?action=stream" />
       </div>
     </div>
   </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+<!--script src="jquery-3.2.1.min.js"></script-->
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+
+setInterval(function() {
+    var myImageElement = document.getElementById('myImage');
+    mapImage.src = 'map.png?rand=' + Math.random();
+}, 2000);
+
+/*
+
+  var socket = io();
+    socket.on('textByLine', function (value) { // When a 'update-value' event is received, execute the following code.
+        //console.log('received new value', value);
+        $('#textByLine').html(value);
+    });
+*/
+</script>
+
+
 </body>
 
 </html>
