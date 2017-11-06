@@ -11,4 +11,9 @@ To run frontend web output locate the frontend folder and run local server of ch
 Python example: python -m SimpleHTTPServer 8000
 
 ### ROS
-Github includes three ROS folders. 
+Github includes three ROS folders.
+
+### Speed Controller
+smc_linux for Pololu setup
+
+
