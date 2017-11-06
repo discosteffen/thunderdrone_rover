@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+
+var image = ["0","1","2","1","5","4"]
+console.log(image);
+
+// Check for the various File API support.
+if (window.File && window.FileReader && window.FileList && window.Blob) {
+  // Great success! All the File APIs are supported.
+} else {
+  alert('The File APIs are not fully supported in this browser.');
+}
+
+
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+for(var i = 0; i < image.length; i++){
+  switch (image[i]) {
+    case 0:
+    ctx.fillStyle = "red";
+      break;
+    case 1:
+    ctx.fillStyle = "green";
+      break;
+    case 2:
+    ctx.fillStyle = "blue";
+      break;
+    default:
+
+  }
+/*
+  if(image[i] == 0){
+    ctx.fillStyle = "red";
+  }
+  if(image[i] == 1){
+    ctx.fillStyle = "blue";
+  }
+  if(image[i] == 2){
+    ctx.fillStyle = "green";
+  }*/
+
+  console.log(image[i])
+  ctx.fillRect((image[i]*10),0,10,10)
+
+}
+
+/*
+ctx.fillStyle = "red";
+ctx.fillRect(0, 0, 10, 10);
+ctx.fillStyle = "blue";
+ctx.fillRect(10, 0, 10, 10);
+ctx.fillStyle = "red";
+ctx.fillRect(20, 0, 10, 10);
+*/
+
+function copy() {
+    var imgData = ctx.getImageData(10, 10, 50, 50);
+    ctx.putImageData(imgData, 100, 100);
+}
+</script>
+
+<button onclick="copy()">Copy</button>
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/steffen/Dev/sofwerx/thunderdrone/ros/catkin_ws/install/setup.sh
