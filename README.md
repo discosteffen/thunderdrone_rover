@@ -4,6 +4,10 @@
 ### Compute Power
 * [Nvidia Jetson TX2](http://www.nvidia.com/object/embedded-systems-dev-kits-modules.html)
 
+### Software
+* Robot Operating System (ROS)
+* Yolo2 (Real Time Object Detection)
+
 ### Sensors
 * [RPLidar A2](https://www.slamtec.com/en/Lidar)
 * [Logitech - c920 Pro Webcam](https://www.logitech.com/en-us/product/hd-pro-webcam-c920)
