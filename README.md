@@ -6,11 +6,10 @@
 
 ### Sensors
 * [RPLidar A2](https://www.slamtec.com/en/Lidar)
-* Logitech - c920 Pro Webcam
-
+* [Logitech - c920 Pro Webcam](https://www.logitech.com/en-us/product/hd-pro-webcam-c920)
+* Inertial Measurement Unit
 
 ### Misc Hardware
-
 
 ## Setup
 
