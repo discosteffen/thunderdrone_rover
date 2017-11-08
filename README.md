@@ -21,6 +21,10 @@ To run frontend web output locate the frontend folder and run local server of ch
 Python example: python -m SimpleHTTPServer 8000
 
 ### ROS
+
+#### Lidar Output Example Hector Mapping
+![ThunderDrone Map](thunder_drone_rodeo_demo_2017_10_cropped.jpg)
+
 Github includes three ROS folders.
 
 ### Speed Controller
