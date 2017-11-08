@@ -1,7 +1,18 @@
 # thunderdrone_rover
 
-Catchall folder for ThunderDrone rover project:
+## Technical Specs
+### Compute Power
+#### Nvidia Jetson TX2
 
+### Sensors
+#### RPLidar A2
+#### Logitech - c920 Pro Webcam
+
+
+### Misc Hardware
+
+
+## Setup
 
 ### Jetson Setup
 Kernel configuration for RPlidar
