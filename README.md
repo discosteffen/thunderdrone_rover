@@ -2,11 +2,11 @@
 
 ## Technical Specs
 ### Compute Power
-#### Nvidia Jetson TX2
+* [Nvidia Jetson TX2](http://www.nvidia.com/object/embedded-systems-dev-kits-modules.html)
 
 ### Sensors
-#### RPLidar A2
-#### Logitech - c920 Pro Webcam
+* [RPLidar A2](https://www.slamtec.com/en/Lidar)
+* Logitech - c920 Pro Webcam
 
 
 ### Misc Hardware
