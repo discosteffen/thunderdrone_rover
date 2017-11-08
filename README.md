@@ -1,4 +1,4 @@
-# thunderdrone_rover
+# ThunderDrone Rover
 
 ## Technical Specs
 ### Compute Power
